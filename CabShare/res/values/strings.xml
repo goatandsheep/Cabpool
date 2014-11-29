@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CabShare</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name ="user_name">User Name:</string>
+    <string name ="user_email">Your email:</string>
+    <string name ="new_user_name">Your username:</string>
+    <string name = "user_password">Password:</string>
+    <string name = "create_user_password">New password:</string>
+    <string name = "Login_in_button">Login</string>
+    <string name = "confrim_button">Confirm</string>
+    <string name = "Cancel_button">Cancel</string>
+    <string name = "ForgetPassword_button">Forget Password?</string>
+    <string name = "Register_button">Register</string>
+    <string name = "confirm_new_password">Confirm Password:</string>
+    <string name = "requestmode_button">Request Taxi Carpool Mode</string>
+    <string name = "offermode_button">Offer Taxi Carpool Mode</string>
+    <string name = "choose_a_mode">Please choose a mode:</string>
+</resources>
