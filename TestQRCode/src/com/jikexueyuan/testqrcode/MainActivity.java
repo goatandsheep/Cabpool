@@ -2,6 +2,7 @@ package com.jikexueyuan.testqrcode;
 
 import com.zxing.activity.CaptureActivity;
 
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
