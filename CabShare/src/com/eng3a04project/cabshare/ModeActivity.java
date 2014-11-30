@@ -33,7 +33,7 @@ public class ModeActivity extends ActionBarActivity {
 			@Override
 			public void onClick(View v) {
 				// start RegistrationActivity
-				Intent i = new Intent(ModeActivity.this, OfferActivity.class);
+				Intent i = new Intent(ModeActivity.this, ScanBeforeOffer.class);
 				startActivity(i);
 			}
 		});

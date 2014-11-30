@@ -18,4 +18,6 @@
     <string name = "requestmode_button">Request Taxi Carpool Mode</string>
     <string name = "offermode_button">Offer Taxi Carpool Mode</string>
     <string name = "choose_a_mode">Please choose a mode:</string>
+    <string name = "scanQRButton">Press to scan QR code</string>
+    <string name = "textDiaplayQR">Display scanned information here!</string>
 </resources>
