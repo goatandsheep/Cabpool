@@ -2,24 +2,26 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
-<LinearLayout 
-    android:layout_width="wrap_content"
+
+<LinearLayout
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical" >
  
     <TextView 
         android:id="@+id/choose_a_mode"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:textSize="15sp"
+        android:textStyle="bold"
 		android:paddingTop="30dp"
-		android:layout_marginLeft = "50dp"
-		android:gravity="left"
+		android:layout_marginLeft = "70dp"
 		android:text="@string/choose_a_mode"/>
      <Button
         android:id="@+id/requestmode_button"
         android:layout_width = "wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop = "70dp"
+        
         android:layout_marginLeft = "50dp"
         android:text="@string/requestmode_button"/>
         
@@ -27,9 +29,27 @@
         android:id="@+id/offermode_button"
         android:layout_width = "wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop = "100dp"
+        
         android:layout_marginLeft = "60dp"
         android:text="@string/offermode_button"/>
 
+	    <LinearLayout 
+    		android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:layout_marginLeft="50dp"
+    		android:layout_marginTop="70dp"
+    		android:orientation="horizontal" >
+    		<Button 
+    		    android:id="@+id/view_profilebtn"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:text="@string/view_profilebtn"/>  
+    		
+    		<Button
+    		    android:id="@+id/backToLoginBtn"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:text="@string/backToLoginBtn"/>   
+         </LinearLayout>
 </LinearLayout>
 </ScrollView>

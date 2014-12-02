@@ -56,8 +56,12 @@
          <activity
              android:name=".ScanBeforeOffer"
              android:label = "@string/app_name"/>
-         
-                 
+         <activity
+             android:name=".ViewProfile"
+             android:label = "@string/app_name"/>         
+         <activity
+             android:name=".EditProfile"
+             android:label = "@string/app_name"/>                    
                 
         <activity
             android:configChanges="orientation|keyboardHidden"

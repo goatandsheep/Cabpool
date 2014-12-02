@@ -10,8 +10,8 @@
     <string name = "user_password">Password:</string>
     <string name = "create_user_password">New password:</string>
     <string name = "Login_in_button">Login</string>
-    <string name = "confrim_button">Confirm</string>
-    <string name = "Cancel_button">Cancel</string>
+    <string name = "confrimRegist_button">Confirm</string>
+    <string name = "CancelRegist_button">Cancel</string>
     <string name = "ForgetPassword_button">Forget Password?</string>
     <string name = "Register_button">Register</string>
     <string name = "confirm_new_password">Confirm Password:</string>
@@ -20,4 +20,19 @@
     <string name = "choose_a_mode">Please choose a mode:</string>
     <string name = "scanQRButton">Press to scan QR code</string>
     <string name = "textDiaplayQR">Display scanned information here!</string>
+    <string name = "userfirstname">First name</string>
+    <string name = "userlastname">Last name</string>
+    <string name = "Cancel_button">Cancel</string>
+    <string name = "view_profilebtn">View Profile</string>
+    <string name = "backToLoginBtn">Back to Login</string>
+    <string name = "userpasswordview">userpassword</string>
+    <string name = "usernameview">username</string>
+    <string name = "passwordview">Your password:</string>
+    <string name = "useremailview">emailaddress</string>
+    <string name = "firstnameview">firstnameview</string>
+    <string name = "lastnameview">lastnameview</string>
+    <string name = "backtomodebtn">Back</string>
+    <string name = "editprofilebtn">Edit Profile</string>
+    <string name = "editusername">Editusername</string>
+    
 </resources>

@@ -9,8 +9,8 @@ import android.widget.Button;
 
 
 public class ModeActivity extends ActionBarActivity {
-	  private Button mRequestButton;
-	  private Button mOfferButton;
+	  private Button mRequestButton,mOfferButton,viewProfileButton,backToLoginButton;
+	 
 	@Override
 	    protected void onCreate(Bundle savedInstanceState){
 	    super.onCreate(savedInstanceState);
@@ -37,5 +37,49 @@ public class ModeActivity extends ActionBarActivity {
 				startActivity(i);
 			}
 		});
+        
+        viewProfileButton=(Button) findViewById(R.id.view_profilebtn);
+        viewProfileButton.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent i = new Intent(ModeActivity.this, ViewProfile.class);
+				startActivity(i);
+			}
+		});
+        
+        backToLoginButton=(Button) findViewById(R.id.backToLoginBtn);
+        backToLoginButton.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent i = new Intent(ModeActivity.this, CabshareActivity.class);
+				startActivity(i);
+			}
+		});
 	 }
+	
+	@Override
+    public void onStart() {
+    super.onStart();
+    }
+    @Override
+    public void onPause() {
+    super.onPause();
+    }
+    @Override
+    public void onResume() {
+    super.onResume();
+    }
+    @Override
+    public void onStop() {
+    super.onStop();
+    }
+    @Override
+    public void onDestroy() {
+    super.onDestroy();
+    }
 }
+

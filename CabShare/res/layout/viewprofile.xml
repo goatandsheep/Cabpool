@@ -2,13 +2,14 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
-    <LinearLayout
+   <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical" >
-    <LinearLayout 
+  <LinearLayout 
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
+        android:layout_marginTop="15dp"
         android:orientation="horizontal">
         <TextView
             android:id="@+id/new_user_name"
@@ -18,42 +19,41 @@
             android:gravity="left"
             android:text="@string/new_user_name" />
 
-        <EditText
-            android:id="@+id/newusernameInput"
+        <TextView
+            android:id="@+id/usernameview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="left"
-            android:inputType="textEmailAddress"
-            android:paddingLeft="5dp" >
-
-        </EditText>
-        
+            android:paddingLeft="5dp" 
+            android:text="@string/usernameview" />      
     </LinearLayout>
     	<LinearLayout
         	android:layout_width="fill_parent"
         	android:layout_height="fill_parent"
+        	android:layout_marginTop="15dp"
         	android:orientation="horizontal">
 
 			<TextView
-			    android:id="@+id/create_user_password"
+			    android:id="@+id/passwordview"
 			    android:layout_width="wrap_content"
 			    android:layout_height="wrap_content"
 			    android:gravity="left"
 			    android:paddingLeft="5dp"
-			    android:text="@string/create_user_password" />
+			    android:text="@string/passwordview" />
 
-		    <EditText
-		        android:id="@+id/createdpassword_namespace"
+		    <TextView
+		        android:id="@+id/userpasswordview"
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
 		        android:gravity="left"
-		        android:inputType="textPassword"
-		        android:paddingRight="5dp" />
+		        android:paddingLeft="5dp"
+		        android:text="@string/userpasswordview" />
 
 	</LinearLayout>
     <LinearLayout 
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
+        android:layout_marginTop="15dp"
         android:orientation="horizontal">
 
         <TextView
@@ -64,63 +64,67 @@
             android:paddingLeft="5dp"
             android:text="@string/user_email" />
 
-        <EditText
-            android:id="@+id/useremailInput"
+        <TextView
+            android:id="@+id/useremailview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="22dp"
-            android:gravity="left"
-            android:inputType="textEmailAddress"/>
+            android:layout_marginLeft="30dp"
+            android:text="@string/useremailview"/>
 
-
+        
     </LinearLayout>
+
     
-	<LinearLayout
-        	android:layout_width="fill_parent"
-        	android:layout_height="fill_parent"
-        	android:orientation="horizontal">
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
 
-			<TextView
-			    android:id="@+id/first_name"
-			    android:layout_width="wrap_content"
-			    android:layout_height="wrap_content"
-			    android:paddingLeft="5dp"
-			    android:gravity="left"
-			    android:text="@string/userfirstname" />
+		<TextView
+			android:id="@+id/first_name"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:paddingLeft="5dp"
+			android:gravity="left"
+		    android:text="@string/userfirstname" />
 
-		    <EditText
-		        android:id="@+id/firstnameInput"
-		        android:layout_width="match_parent"
-		        android:layout_height="wrap_content"
-		        android:layout_marginLeft="26dp"
-		        android:gravity="left"
-		        android:inputType="textEmailAddress"
-		        android:paddingRight="5dp" />
 
-	</LinearLayout>
+        <TextView
+            android:id="@+id/firstnameview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="34dp"
+            android:text="@string/firstnameview"/>
+
+        
+    </LinearLayout>
 	
-		<LinearLayout
-        	android:layout_width="fill_parent"
-        	android:layout_height="fill_parent"
-        	android:orientation="horizontal">
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
 
-			<TextView
-			    android:id="@+id/last_name"
-			    android:layout_width="wrap_content"
-			    android:layout_height="wrap_content"
-			    android:paddingLeft="5dp"
-			    android:gravity="left"
-			    android:text="@string/userlastname" />
+		<TextView
+			android:id="@+id/last_name"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:paddingLeft="5dp"
+			android:gravity="left"
+			android:text="@string/userlastname" />
 
-		    <EditText
-		        android:id="@+id/lastnameInput"
-		        android:layout_width="match_parent"
-		        android:layout_height="wrap_content"
-		        android:gravity="left"
-		        android:layout_marginLeft="26dp"
-		        android:inputType="textEmailAddress" />
 
-	</LinearLayout>  
+        <TextView
+            android:id="@+id/lastnameview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="36dp"
+            android:text="@string/lastnameview"/>
+
+        
+    </LinearLayout>
+	
 	<LinearLayout
         	android:layout_width="fill_parent"
         	android:layout_height="fill_parent"
@@ -129,17 +133,17 @@
         	android:gravity="center">
 
 		<Button
-		    android:id="@+id/confirmRegist_button"
+		    android:id="@+id/editprofilebtn"
 		    android:layout_width="wrap_content"
 		    android:layout_height="wrap_content"
 		    
-		    android:text="@string/confrimRegist_button" />
+		    android:text="@string/editprofilebtn" />
 
 		<Button
-		    android:id="@+id/cancelRegist_button"
+		    android:id="@+id/backtomodebtn"
 		    android:layout_width="wrap_content"
 		    android:layout_height="wrap_content"
-		    android:text="@string/CancelRegist_button" />
+		    android:text="@string/backtomodebtn" />
 		    
 	</LinearLayout>
 	
