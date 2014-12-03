@@ -12,12 +12,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.security.*;
+
 
 public class CabshareActivity extends ActionBarActivity {
 
 	private static String user_name, userpassword, first_name, last_name, emailaddress;
 	private Button mRegisterButton;
 	private Button mLoginButton;
+	private Button mGPlusButton;
 	private EditText loginInput, passwordInput;
 	private static int success;
 	public EditText getLoginInput() {
@@ -39,7 +42,68 @@ public class CabshareActivity extends ActionBarActivity {
 		this.passwordInput = passwordInput;
 	}
 
+	//G+ Sign in button stuff
+	/* Track whether the sign-in button has been clicked so that we know to resolve
+	 * all issues preventing sign-in without waiting.
+	 */
+	private boolean mSignInClicked;
 
+	/* Store the connection result from onConnectionFailed callbacks so that we can
+	 * resolve them when the user clicks sign-in.
+	 */
+	private ConnectionResult mConnectionResult;
+
+	/* A helper method to resolve the current ConnectionResult error. */
+	private void resolveSignInError() {
+	  if (mConnectionResult.hasResolution()) {
+	    try {
+	      mIntentInProgress = true;
+	      startIntentSenderForResult(mConnectionResult.getResolution().getIntentSender(),
+	          RC_SIGN_IN, null, 0, 0, 0);
+	    } catch (SendIntentException e) {
+	      // The intent was canceled before it was sent.  Return to the default
+	      // state and attempt to connect to get an updated ConnectionResult.
+	      mIntentInProgress = false;
+	      mGoogleApiClient.connect();
+	    }
+	  }
+	}
+
+	public void getGravatar(String email)
+	{
+		String hash = MD5(email);
+		hash = "http://gravatar.com/avatar/" + hash;
+		
+	}
+	
+	private String MD5(String md5) {
+	   try {
+	        java.security.MessageDigest md = java.security.MessageDigest.getInstance("MD5");
+	        byte[] array = md.digest(md5.getBytes());
+	        StringBuffer sb = new StringBuffer();
+	        for (int i = 0; i < array.length; ++i) {
+	          sb.append(Integer.toHexString((array[i] & 0xFF) | 0x100).substring(1,3));
+	       }
+	        return sb.toString();
+	    } catch (java.security.NoSuchAlgorithmException e) {
+	    }
+	    return null;
+	}
+	
+	public void onConnectionFailed(ConnectionResult result) {
+	  if (!mIntentInProgress) {
+	    // Store the ConnectionResult so that we can use it later when the user clicks
+	    // 'sign-in'.
+	    mConnectionResult = result;
+
+	    if (mSignInClicked) {
+	      // The user has already clicked 'sign-in' so we attempt to resolve all
+	      // errors until the user is signed in, or they cancel.
+	      resolveSignInError();
+	    }
+	  }
+	}
+	
 	private static Context context;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +113,7 @@ public class CabshareActivity extends ActionBarActivity {
         context = this;
         mRegisterButton = (Button)findViewById(R.id.Register_button);
         mLoginButton = (Button)findViewById(R.id.login_button);
+        mGPlusButton = (Button)findViewById(R.id.sign_in_button);
         loginInput =(EditText)findViewById(R.id.user_namespace);
         passwordInput =(EditText)findViewById(R.id.password_namespace);
         
@@ -81,6 +146,17 @@ public class CabshareActivity extends ActionBarActivity {
 				Log.d("Login task executed","Login task executed");
 			}
 		});
+        mGPlusButton.setOnClickListener(new View.OnClickListener() {
+        	
+        		@Override
+        		public void onClick(View view){
+        			  if (view.getId() == R.id.sign_in_button
+        					    && !mGoogleApiClient.isConnecting()) {
+        					    mSignInClicked = true;
+        					    resolveSignInError();
+					  }
+        		}
+        });
   
     }
     @Override
@@ -193,6 +269,12 @@ public class CabshareActivity extends ActionBarActivity {
 	public static void setSuccess(int success) {
 		CabshareActivity.success = success;
 	}
-    
+	
+	//receiving a connection
+	@Override
+	public void onConnected(Bundle connectionHint) {
+	  mSignInClicked = false;
+	  Toast.makeText(this, "User is connected!", Toast.LENGTH_LONG).show();
+	}
     
 }
