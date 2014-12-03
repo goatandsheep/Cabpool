@@ -13,7 +13,7 @@ if (isset($_POST['user_name'])) {
     $user_name = $_POST['user_name'];
 
     // include db connect class
-    require_once __DIR__ . '/db_connect.php';
+    require_once dirname(__FILE__) . '/db_connect.php';
 
     // connecting to db
     $db = new DB_CONNECT();

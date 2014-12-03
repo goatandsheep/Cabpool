@@ -1,7 +1,7 @@
 package com.eng3a04project.cabshare;
 
 public final class CurrentIp  {
-     private static  String ip = "172.17.20.84";
+     private static  String ip = "cabpool.me";
 
 	public  String getIp() {
 		return ip;
