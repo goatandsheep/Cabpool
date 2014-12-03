@@ -3,6 +3,11 @@
 	<name>android-support-v7-appcompat</name>
 	<comment></comment>
 	<projects>
+		<project>appcompat_v7</project>
+		<project>BarCodeTest</project>
+		<project>CabShare</project>
+		<project>google-play-services_lib</project>
+		<project>RatingSystem</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

@@ -1,4 +1,3 @@
-package me.cabshare.ratingsystem;
 
 
 import java.util.ArrayList;
