@@ -1,4 +1,4 @@
-package com.cabshare.ratingssystem;
+package com.cabshare.ratingsystem;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
-public class thanksExit extends Activity{
+public class ThanksExit extends Activity{
 	
 	Button exitbtn;
 	
@@ -31,10 +31,15 @@ public class thanksExit extends Activity{
 			 
 			@Override
 			public void onClick(View v) {
-		Intent intent = new Intent(Intent.ACTION_MAIN);
+		//finish();
+				//this is going to cycle to the first page again
+				Intent intent = new Intent(Intent.ACTION_MAIN);
 		intent.addCategory(Intent.CATEGORY_HOME);
-		intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-		startActivity(intent);
+		intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+		finish();
+		finish();
+		//startActivity(intent);
+		
 	}
 
 });

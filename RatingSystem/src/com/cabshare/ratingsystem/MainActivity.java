@@ -1,5 +1,4 @@
-package com.cabshare.ratingssystem;
-
+package com.cabshare.ratingsystem;
 import java.util.ArrayList;
 
 import android.support.v7.app.ActionBarActivity;

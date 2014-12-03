@@ -6,7 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.cabshare.MainActivity" >
+    tools:context="com.cabshare.ratingsystem.MainActivity" >
 
     <ListView
         android:id="@+id/lvItemList"
@@ -15,5 +15,4 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true" >
     </ListView>
-
 </RelativeLayout>

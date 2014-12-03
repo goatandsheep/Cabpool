@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.cabshare.ratingssystem"
+    package="com.cabshare.ratingsystem"
     android:versionCode="1"
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="10"
+        android:minSdkVersion="8"
         android:targetSdkVersion="21" />
 
     <application
@@ -22,18 +22,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-            
-        <activity
-            android:name=".CommList">
-           </activity> 
-           
-         <activity
-            android:name=".CommRate">
-           </activity> 
-          
-          <activity
-            android:name=".thanksExit">
-           </activity> 
+         <activity  
+             android:name=".CommList">
+         </activity>
+         <activity  
+             android:name=".CommRate">
+         </activity>
+         <activity  
+             android:name=".ThanksExit">
+         </activity>
+       
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-package com.cabshare.ratingssystem;
+package com.cabshare.ratingsystem;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -47,7 +47,7 @@ public class CommRate extends Activity {
 			@Override
 			public void onClick(View v) {
 	 
-				Intent intent = new Intent(CommRate.this, thanksExit.class);
+				Intent intent = new Intent(CommRate.this, ThanksExit.class);
 				Bundle extras = new Bundle();
 				extras.putString("item_key", "go to commuter 1 rating page");
 				intent.putExtras(extras);
