@@ -8,6 +8,9 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.widget.ImageView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -71,9 +74,17 @@ public class CabshareActivity extends ActionBarActivity {
 
 	public void getGravatar(String email)
 	{
-		String hash = MD5(email);
-		hash = "http://gravatar.com/avatar/" + hash;
-		
+		String imageUrl = MD5(email);
+		imageUrl = "http://gravatar.com/avatar/" + imageUrl;
+		try {
+			  ImageView i = (ImageView)findViewById(R.id.image);
+			  Bitmap bitmap = BitmapFactory.decodeStream((InputStream)new URL(imageUrl).getContent());
+			  i.setImageBitmap(bitmap); 
+			} catch (MalformedURLException e) {
+			  e.printStackTrace();
+			} catch (IOException e) {
+			  e.printStackTrace();
+			}
 	}
 	
 	private String MD5(String md5) {

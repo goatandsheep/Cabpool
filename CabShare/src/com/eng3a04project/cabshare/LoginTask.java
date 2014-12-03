@@ -110,7 +110,9 @@ public class LoginTask extends AsyncTask<Object, Object, Object> {
 							last_name = jObject.getString("last_name");
 							emailaddress = jObject.getString("emailaddress");
 							
-							
+							//play background music
+							MediaPlayer mp = MediaPlayer.create(context, R.cabshare.wav);
+							mp.start();
 							
 							
 							
