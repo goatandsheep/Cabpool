@@ -30,6 +30,10 @@
          <activity
             android:name=".CommRate">
            </activity> 
+          
+          <activity
+            android:name=".thanksExit">
+           </activity> 
     </application>
 
 </manifest>
