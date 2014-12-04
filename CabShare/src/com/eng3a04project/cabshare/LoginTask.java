@@ -54,8 +54,6 @@ public class LoginTask extends AsyncTask<Object, Object, Object> {
 			e.printStackTrace();
 		}
 		super.onPostExecute(result);
-		
-		
 	}
 
 	@Override

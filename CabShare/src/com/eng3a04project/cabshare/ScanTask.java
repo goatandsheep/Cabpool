@@ -41,6 +41,7 @@ public class ScanTask extends AsyncTask<Object, Object, Object> {
 		super.onPreExecute();
 	}
 	
+	//communication w the database
 	public void addCabID(String cabid,String user_name){
 		// create new HTTPClient and Post Header
 		CurrentIp currentip = new CurrentIp();
@@ -72,10 +73,6 @@ public class ScanTask extends AsyncTask<Object, Object, Object> {
 				String success = mainObject.getString("success"); //success
 				
 				ScanSuccess = Integer.parseInt(success);
-				
-				
-				
-				
 				
 			} catch (JSONException e) {
 				// TODO Auto-generated catch block
