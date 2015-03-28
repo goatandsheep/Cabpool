@@ -17,3 +17,5 @@ just import the following files into CabShare:
 5. And don't forget the big one -- CabShare
 
 IMPORTANT: import projects and set all of them as libraries to CabShare It should work, I m fighting with u guys, we will be fine this time!Just hurry up!
+
+> **WARNING**: this project has been abandoned. The project is also unfinished.
